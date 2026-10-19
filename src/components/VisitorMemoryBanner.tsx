@@ -156,8 +156,16 @@ export const VisitorMemoryBanner: React.FC<VisitorMemoryBannerProps> = ({ onSele
         >
           {/* Greeting Side */}
           <div className="flex items-center gap-3.5 text-center md:text-left">
-            <div className="w-12 h-12 rounded-2xl bg-[#BDE4C6]/30 border border-[#8DBA83] flex items-center justify-center text-2xl shrink-0">
-              {profile.nickname ? '🌟' : '🦛'}
+            <div className="w-12 h-12 rounded-2xl bg-[#BDE4C6]/30 border border-[#8DBA83] flex items-center justify-center shrink-0 overflow-hidden">
+              {profile.nickname ? (
+                <span className="text-2xl">🌟</span>
+              ) : (
+                <img
+                  src={bloopHi}
+                  alt="Bloop"
+                  className="w-full h-full object-contain"
+                />
+              )}
             </div>
 
             <div>
