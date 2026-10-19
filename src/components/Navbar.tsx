@@ -661,7 +661,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       {mobileMenuOpen && (
         <div
           id="mobile-navigation-drawer"
-          className="fixed inset-0 z-50 lg:hidden flex justify-end"
+          className="fixed inset-0 z-[9999] lg:hidden flex justify-end w-full h-[100dvh] overflow-hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation Drawer"
@@ -679,7 +679,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Drawer Slide-In Panel */}
           <div
             ref={drawerRef}
-            className={`relative z-10 w-full max-w-sm sm:max-w-md h-full flex flex-col shadow-2xl border-l transition-transform duration-300 animate-in slide-in-from-right overflow-hidden ${
+            className={`relative z-10 w-full max-w-none sm:max-w-md h-full flex flex-col shadow-2xl border-l transition-transform duration-300 animate-in slide-in-from-right overflow-hidden ${
               isNight
                 ? 'bg-[#1C172B] border-[#4D3F6D] text-[#F3ECF8]'
                 : 'bg-[#FFF6E8] border-[#F2B8C6] text-[#493B43]'
