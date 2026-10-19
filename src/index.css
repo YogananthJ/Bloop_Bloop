@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-marshmallow: #F2B8C6;
+    --color-cream: #FFF6E8;
+    --color-mint: #BDE4C6;
+    --color-sky: #B9DDF5;
+    --color-butter: #FFE29A;
+    --color-lavender: #D9C8F0;
+    --color-cocoa: #493B43;
+    --color-meadow: #8DBA83;
+    --night-bg: #1C172B;
+    --night-surface: #27213C;
+    --night-surface-hover: #332B4D;
+    --night-border: #4D3F6D;
+    --night-text: #F3ECF8;
+    --night-text-muted: #B8A9C9;
+  }
+
+  body {
+    background-color: #FFF6E8;
+    color: #493B43;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Emote Animations for Bloop (Subtle, whole-character CSS transforms) */
+@keyframes bloop-idle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+@keyframes bloop-wave {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(4deg) scale(1.02);
+  }
+  50% {
+    transform: rotate(-3deg) scale(1.02);
+  }
+  75% {
+    transform: rotate(3deg) scale(1.01);
+  }
+}
+
+@keyframes bloop-curious {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  30%, 70% {
+    transform: rotate(-6deg) translateY(-6px) scale(1.03);
+  }
+}
+
+@keyframes bloop-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1, 1);
+  }
+  20% {
+    transform: translateY(4px) scale(1.04, 0.94);
+  }
+  45% {
+    transform: translateY(-22px) scale(0.96, 1.06);
+  }
+  70% {
+    transform: translateY(-4px) scale(1.02, 0.98);
+  }
+  85% {
+    transform: translateY(2px) scale(1, 1);
+  }
+}
+
+@keyframes bloop-wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(3deg) translateY(-2px);
+  }
+  40% {
+    transform: rotate(-3deg) translateY(-2px);
+  }
+  60% {
+    transform: rotate(2.5deg) translateY(-1px);
+  }
+  80% {
+    transform: rotate(-2.5deg) translateY(-1px);
+  }
+}
+
+@keyframes bloop-sleepy {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-2deg) scale(0.99);
+  }
+}
+
+@keyframes bloop-giggle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.03) translateY(-3px);
+  }
+  50% {
+    transform: scale(0.98) translateY(2px);
+  }
+  75% {
+    transform: scale(1.02) translateY(-2px);
+  }
+}
+
+@keyframes float-dandelion {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(30px, -40px) rotate(15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(60px, -80px) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* Emote helper utility classes */
+.animate-bloop-idle {
+  animation: bloop-idle 4s ease-in-out infinite;
+}
+.animate-bloop-wave {
+  animation: bloop-wave 1.2s ease-in-out;
+}
+.animate-bloop-curious {
+  animation: bloop-curious 1.4s ease-in-out;
+}
+.animate-bloop-bounce {
+  animation: bloop-bounce 1s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+.animate-bloop-wiggle {
+  animation: bloop-wiggle 1s ease-in-out;
+}
+.animate-bloop-sleepy {
+  animation: bloop-sleepy 2.2s ease-in-out;
+}
+.animate-bloop-giggle {
+  animation: bloop-giggle 0.8s ease-in-out;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+/* Custom scrollbar for playful feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF6E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #F2B8C6;
+  border-radius: 9999px;
+  border: 2px solid #FFF6E8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E89EAE;
+}

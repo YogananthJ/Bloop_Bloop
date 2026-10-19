@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dream-1792394386923-wz5gc",
+    "name": "Evaluator",
+    "message": "May your toys bring joy!",
+    "theme": "starlight",
+    "isAnonymous": false,
+    "status": "approved",
+    "createdAt": "2026-10-19T07:19:46.923Z"
+  },
+  {
+    "id": "dream-1",
+    "name": "Alex & Dandelion",
+    "message": "I hope Bloop builds a giant cloud kite that plays harp tunes in the breeze!",
+    "theme": "starlight",
+    "isAnonymous": false,
+    "status": "approved",
+    "createdAt": "2026-10-18T07:19:27.550Z"
+  },
+  {
+    "id": "dream-2",
+    "name": "Lily the Builder",
+    "message": "Boing-boing! May every toy in the Play Lab bring giggles to children everywhere.",
+    "theme": "clover",
+    "isAnonymous": false,
+    "status": "approved",
+    "createdAt": "2026-10-18T19:19:27.550Z"
+  },
+  {
+    "id": "dream-3",
+    "name": "Pip Fan #1",
+    "message": "Tell Pip-Squawk his spectacles are super stylish. Bloop, you are the cutest hippo!",
+    "theme": "marshmallow",
+    "isAnonymous": false,
+    "status": "approved",
+    "createdAt": "2026-10-19T03:19:27.550Z"
+  }
+]

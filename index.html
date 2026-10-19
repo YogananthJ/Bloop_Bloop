@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloop's Little World</title>
+    <meta name="description" content="Interactive 3D character portfolio and playground for Bloop the Marshmallow Hippo, Junior Play Engineer at Meadow Play Lab in Cozy Clover Meadow." />
+    <meta name="theme-color" content="#FFF6E8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1C172B" media="(prefers-color-scheme: dark)" />
+    
+    <!-- OpenGraph Metadata -->
+    <meta property="og:site_name" content="Bloop's Little World" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bloop's Little World — Interactive Character Portfolio" />
+    <meta property="og:description" content="Explore handcrafted toys, synthesized music-box lullabies, interactive 3D stages, and live starlight dreams with Bloop the Marshmallow Hippo." />
+    <meta property="og:image" content="/bloop.jpg" />
+
+    <!-- Twitter / X Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bloop's Little World — Interactive Character Portfolio" />
+    <meta name="twitter:description" content="Explore handcrafted toys, synthesized music-box lullabies, interactive 3D stages, and live starlight dreams with Bloop the Marshmallow Hippo." />
+    <meta name="twitter:image" content="/bloop.jpg" />
+
+    <!-- Schema.org JSON-LD Structured Data for WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Bloop's Little World",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "description": "Interactive 3D character portfolio and playground for Bloop the Marshmallow Hippo, Junior Play Engineer at Meadow Play Lab.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "character": {
+        "@type": "Person",
+        "name": "Bloop-Bloop",
+        "jobTitle": "Junior Play Engineer & Toy Developer"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts with display=swap for zero layout shift -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
