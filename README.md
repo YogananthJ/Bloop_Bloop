@@ -1,7 +1,7 @@
 # Bloop’s Little World — A Tiny World of Big Giggles
 
 <p align="center">
-  <a href="https://bloop-s-world.ai.studio">
+  <a href="https://bloop-bloop-lilac.vercel.app">
     <strong>🌐 Live Demo</strong>
   </a>
   &nbsp; • &nbsp;
