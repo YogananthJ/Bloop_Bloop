@@ -10,6 +10,7 @@ import cozyCloverMeadowImage from '../assets/images/cozy_clover_meadow_179238986
 import meadowPlayLabImage from '../assets/images/meadow_play_lab_1792389862825.jpg';
 import friendsCrewImage from '../assets/images/crew_with_bloop_1792395121366.jpg';
 import friendsCrewOriginalImage from '../assets/images/friends_crew_portrait_1792389862754.jpg';
+import toyProjectsCollectionImage from '../assets/images/toy_projects_collection_1792389862917.jpg';
 
 // Keep the original public URL for the canonical Bloop reference.
 const bloopHeroImage = '/b34fa565-2488-4c6c-a483-8a71e3f8c102.jpg';
@@ -25,7 +26,7 @@ export const ASSETS = {
 
   // Toy Projects Showcase & Friends Crew
   // Update this mapping after confirming the actual file exists.
-  toyProjectsCollection: '/src/assets/images/toy_projects_collection_1792389862917.jpg',
+  toyProjectsCollection: toyProjectsCollectionImage,
   friendsCrew: friendsCrewImage,
   friendsCrewOriginal: friendsCrewOriginalImage,
   friendsCrewWithBloop: friendsCrewImage,
