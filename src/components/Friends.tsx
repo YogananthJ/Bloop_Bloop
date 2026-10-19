@@ -11,6 +11,7 @@ import mamaWillowImage from '../assets/images/mama_willow.png';
 interface Friend {
   id: string;
   name: string;
+  image: string;
   species: string;
   profession: string;
   role: string;
@@ -35,7 +36,7 @@ export const Friends: React.FC = () => {
     {
       id: 'pickle',
       name: 'Pickle',
-      image: 'pickleImage',
+      image: pickleImage,
       species: 'Bright Yellow Duckling',
       profession: 'Quality Assurance & Beta Tester',
       role: 'Stress-tests toys, drops them off clover logs, and discovers sneaky Bloop-Bugs before toys leave the lab.',
@@ -51,7 +52,7 @@ export const Friends: React.FC = () => {
     {
       id: 'pipsquawk',
       name: 'Pip-Squawk',
-      image: 'pipSquawkImage',
+      image: pipSquawkImage,
       species: 'Tiny Blue Hedgehog',
       profession: 'Backend Infrastructure & Builder',
       role: 'Constructs wooden tracks, interlocking bamboo slides, counterweight levers, and sturdy workbench frames.',
@@ -67,7 +68,7 @@ export const Friends: React.FC = () => {
     {
       id: 'luna',
       name: 'Luna',
-      image: 'lunaImage',
+      image: lunaImage,
       species: 'Pastel-Purple Bunny',
       profession: 'UI & Sensory Designer',
       role: 'Develops friendly colors, velvety fabric textures, soothing sound chimes, and gentle sensory experiences.',
@@ -82,7 +83,7 @@ export const Friends: React.FC = () => {
     },
     {
       id: 'mamawillow',
-      name: 'Mama Willow',
+      name: Mama Willow,
       image: 'mamaWillowImage',
       species: 'Gentle Fluffy Mother Sheep',
       profession: 'Senior Project Manager & Mentor',
@@ -168,8 +169,13 @@ export const Friends: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className={`w-14 h-14 rounded-2xl ${friend.accentColor} flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-xs`}>
-                    {friend.image}
+                  <div className={`w-14 h-14 rounded-2xl ${friend.accentColor} flex items-center justify-center group-hover:scale-110 transition-transform shadow-xs overflow-hidden shrink-0`}>
+                    <img
+                      src={friend.image}
+                      alt={friend.name}
+                      loading="lazy"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full border border-black/5 ${isNight ? 'bg-[#1C172B]' : 'bg-[#FFF6E8]'}`}>
                     {friend.badge}
@@ -220,8 +226,12 @@ export const Friends: React.FC = () => {
               </button>
 
               <div className="flex items-center gap-4">
-                <div className={`w-16 h-16 rounded-2xl ${selectedFriend.accentColor} flex items-center justify-center text-4xl shadow-xs`}>
-                  {selectedFriend.avatarEmoji}
+                <div className={`w-16 h-16 rounded-2xl ${selectedFriend.accentColor} flex items-center justify-center shadow-xs overflow-hidden shrink-0`}>
+                  <img
+                    src={selectedFriend.image}
+                    alt={selectedFriend.name}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
                   <div className="text-[11px] font-bold text-[#8DBA83] uppercase tracking-wider">
