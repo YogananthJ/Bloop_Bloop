@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import { sounds } from '../utils/audio';
 import { useTheme } from '../context/ThemeContext';
+import bloopCharacter from '../assets/images/bloop_character.png';
 
 export type TabType =
   | 'home'
@@ -329,9 +330,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center gap-2 sm:gap-2.5 group text-left cursor-pointer focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#8DBA83] rounded-2xl p-1 transition-transform active:scale-95"
             aria-label="Bloop's Little World - Return to Home"
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#F2B8C6] flex items-center justify-center text-lg sm:text-xl shadow-xs group-hover:scale-105 transition-transform shrink-0 border border-white/40">
-              🦛
-            </div>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#F2B8C6] flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform shrink-0 border border-white/40 overflow-hidden">
+              <img src={bloopCharacter}
+              alt="Bloop"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
             <div className="flex flex-col">
               <span className="font-display font-extrabold text-base sm:text-lg lg:text-xl tracking-tight transition-colors whitespace-nowrap block group-hover:text-[#8DBA83] leading-none">
                 Bloop’s Little World
