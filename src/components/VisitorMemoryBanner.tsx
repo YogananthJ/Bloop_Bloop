@@ -6,6 +6,7 @@ import { Sparkles, Heart, RotateCcw, Check, MessageSquare, Music, Shield, ArrowR
 import { TabType } from './Navbar';
 import bloopHi from '../assets/images/hi_bloop.png';
 
+
 interface VisitorMemoryBannerProps {
   onSelectTab: (tab: TabType) => void;
 }
@@ -84,11 +85,11 @@ export const VisitorMemoryBanner: React.FC<VisitorMemoryBannerProps> = ({ onSele
           }`}
         >
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#F2B8C6] flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform shrink-0 border border-white/40 overflow-hidden">
+            <div className="w-16 h-16 rounded-3xl bg-[#F2B8C6]/30 border-2 border-[#F2B8C6] flex items-center justify-center shrink-0 animate-bounce-toy overflow-hidden">
               <img
                 src={bloopHi}
-                alt="Bloop"
-                className="w-full h-full object-cover rounded-full"
+                alt="Bloop waving hello"
+                className="w-full h-full object-contain"
               />
             </div>
 
